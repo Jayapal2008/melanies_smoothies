@@ -9,8 +9,6 @@ st.write(
     """
 )
 
-from snowflake.snowpark.functions import col
-
 cnx = st.connection("snowflake")
 session = cnx_session()
 my_dataframe = session.table("SMOOTHIES.PUBLIC.FRUIT_OPTIONS").select(col('FRUIT_NAME'))
